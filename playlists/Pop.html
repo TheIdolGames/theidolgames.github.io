@@ -10,8 +10,6 @@
 
         <script type='text/javascript' src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>
-        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js'></script>
-        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js'></script>
         <script type='text/javascript' src='https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/cr-1.5.6/fh-3.2.3/r-2.3.0/sb-1.3.3/datatables.min.js'></script>
         <script type='text/javascript' src='https://cdn.datatables.net/plug-ins/1.11.3/filtering/type-based/accent-neutralise.js'></script>
     </head>
@@ -20,13 +18,15 @@
             <div class='modal-dialog modal-dialog-centered modal-lg' role='document'>
                 <div class='modal-content'>
                     <div class='modal-body p-0'></div>
-                    <small>Cuando termine de cargar, toca en el centro para reproducir</small>
+                    <small>⚠️ Cuando termine de cargar, toca en el centro para reproducir ⚠️</small>
+                    <small>La dificultad por defecto es expert, y en vista móvil no se puede cambiar.</small>
+                    <small>¡Es mejor si la ves desde un ordenador o tablet!</small>
                 </div>
             </div>
         </div>
         <div class='container pt-3 pb-5'>
             <div class='btn btn-primary btn-sm float-left pl-backtoindex'><a class='text-light' href='../index.html'>← Volver a las playlists</a></div>
-            <div class='pl-info'>
+            <div class='mt-3 pl-info'>
                 <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAMAAAAJixmgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QsZDRUqNEq1BAAAAvdQTFRFAAAAYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliTYliT////IgG70AAAAPt0Uk5TAAABAgMEBQYH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' alt='Playlist image' class='pl-image'>
                 <h1 class='pl-name'>Pop playlist <small> by Javiink</small></h1>
             </div>
@@ -114,11 +114,11 @@
 </tbody>
                 </table>
             </div>
-            <small>Actualizado a 14-07-2022 22:27:33.</small>
+            <small>Actualizado a 14-07-2022 23:29:17.</small>
         </div>
 
         <script type='text/javascript'>
-        var dataTable;
+            var dataTable;
             $(document).ready(function () {
                 dataTable = $('.pl-songstable table').DataTable( {
                     order: [[2, 'asc' ]],
@@ -134,6 +134,12 @@
                     },
                     pageLength: 1000,
                 } );
+                var searchHash = location.hash.substr(1);
+                if(searchHash){
+                    searchString = searchHash.substr(searchHash.indexOf('search=')).split('&')[0].split('=')[1];
+                    dataTable.search(decodeURI(searchString)).draw();
+                }
+
                 $('.pl-btn-diff').on('click', function(e){
                     var diff = $(this).data('diff');
                     dataTable.search(diff).draw();
